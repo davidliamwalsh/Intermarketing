@@ -1,0 +1,145 @@
+@import 'variables.scss';
+
+* {
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0;
+}
+
+body {
+  line-height: 1.4;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: $grey;
+  font-size: 15px;
+}
+
+.container {
+  margin: 2em auto;
+  max-width: 300px;
+  height: 500px;
+  text-align: center;
+}
+
+.inner__container {
+  border: .5px solid $lightgrey;
+  margin-top: 1em;
+
+  .inner__border {
+    border: 1px solid $lightgrey;
+    background: $lightgrey;
+
+    hr {
+      border: 1px solid $green;
+      width: 80%;
+      height: .6em;
+      background: $green;
+    }
+  }
+}
+
+.section1 {
+  background: $black;
+  position: relative;
+  border-radius: 4px;
+  padding: 1em;
+  color: $lightgrey;
+  font-weight: 200;
+  width: 100%;
+
+  :after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    border-top: 5px solid $black;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  &__number {
+    font-weight: bold;
+    padding-right: .3em;
+  }
+}
+
+.section2 {
+  text-align: left;
+  padding: 1em;
+  box-shadow: 0 4px 2px -2px $lightgrey;
+
+  &__alert {
+    font-weight: 200;
+    
+    &--fund {
+      color: $orange;
+      font-weight: bold;
+      padding-right: .3em;
+    }
+  }
+
+  &__donors {
+    padding: 1em 0;
+    font-weight: 200;
+
+    &--fund {
+      color: $orange;
+      padding: 0 .3em;
+      font-weight: bold;
+    }
+  }
+
+  &__donate {
+    display: flex;
+    justify-content: space-between;
+
+    &--input {
+      font-weight: bold;
+      font-size: 15px;
+      width: 120px;
+      border-radius: 4px;
+      border: 1px solid $lightgrey;
+
+      &::placeholder {
+        padding: 1em .5em;
+      }
+    }
+
+    &--btn {
+      background: $green;
+      color: $lightgrey;
+      font-weight: bold;
+      font-size: 15px;
+      border-radius: 4px;
+      padding: 1em;
+      width: 120px;
+    }
+  }
+
+  &__test {
+    color: $blue;
+    font-style: italic;
+    font-weight: 200;
+    padding-top: .5em;
+    font-size: 15px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  
+
+  &__btn {
+    background: $lightgrey;
+    color: $grey;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 1em;
+    font-size: 12px;
+    width: 136px;
+    box-shadow: 0 4px 2px -2px $lightgrey;
+  }
+}
+
